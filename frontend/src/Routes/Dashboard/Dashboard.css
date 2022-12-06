@@ -1,0 +1,44 @@
+.Dashboard-container {
+    box-sizing: border-box;
+    height: calc(100vh - 78px);
+    /* background: url(../../assets/attendance.png) no-repeat; */
+    background-color: #242e42;
+    background-size: cover;
+  }
+  
+  .Dashboard-card-container {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    flex-wrap: wrap;
+  }
+  
+  .Dashboard-card {
+    width: 264px;
+    height: 122px;
+    border-radius: 12px;
+    background: #fff;
+    padding: 1.9rem;
+  }
+  
+  .Dashboard-card p:nth-of-type(1) {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.06em;
+    color: #242e42;
+    opacity: 0.5;
+  }
+  
+  .Dashboard-card .countUp {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 37px;
+    letter-spacing: 0.06em;
+    color: #242e42;
+  }
