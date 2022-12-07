@@ -11,7 +11,7 @@ const Dashboard = () => {
     one: 50,
     two: 10,
     three: 12,
-    four: 23,
+    four: 25,
   });
 
   useEffect(() => {
