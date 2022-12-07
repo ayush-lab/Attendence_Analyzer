@@ -1,0 +1,23 @@
+.ClassDetail{
+    background-color:white;
+    padding-left:24px;
+    padding-top: 24px;
+    margin-bottom:24px;
+}
+
+.cards{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap:12px;
+    padding-top: 24px;
+    padding-bottom:24px;
+}
+
+.card{
+    background:rgb(211, 203, 203);
+}
+
+.piechart{
+    width:200px;
+}

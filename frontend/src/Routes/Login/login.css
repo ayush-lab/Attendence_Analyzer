@@ -1,0 +1,10 @@
+.ant-message-notice-content .anticon{
+    transform: translateY(-4px);
+  }
+  .forgotPass{
+    text-decoration:underline;
+    text-decoration-color: #40A9FF;
+    margin-left:150px;
+    width: fit-content;
+    transform: translateX(38px);
+  }
