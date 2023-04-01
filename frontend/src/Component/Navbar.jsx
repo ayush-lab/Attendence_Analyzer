@@ -14,7 +14,7 @@ function Navv(props) {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto" activeKey={location.pathname}>
             <Nav.Link href="/">Dashboard</Nav.Link>
-            <Nav.Link href="/classes">Classes</Nav.Link>
+            <Nav.Link href="/blocks">Blocks</Nav.Link>
             <Nav.Link href="/timeline">TimeLine</Nav.Link>
             <Nav.Link href="/calender">Calender</Nav.Link>
             <Nav.Link href="/login">Login</Nav.Link>

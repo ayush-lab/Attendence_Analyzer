@@ -39,27 +39,27 @@ const rowData = [
   {
     key: '1',
     code:"1",
-    name: 'S1 Class',
+    name: 'EC_Block',
   },
   {
     key: '3',
     code:"3",
-    name: 'S3 Class',
+    name: 'CSIT_Block',
   },
   {
     key: '4',
     code:"4",
-    name: 'S4 Class',
+    name: 'ME_Block',
   },
   {
     key: '5',
     code:"5",
-    name: 'S5 Class',
+    name: 'NEW_LT_BLOCK',
   },
   {
     key: '6',
     code:"6",
-    name: 'S6 Class',
+    name: 'CE_BLOCK',
   },
 ];
 
@@ -164,15 +164,18 @@ const rowData = [
       ...getColumnSearchProps("code"),
     },
     {
-      title: "CLASS NAME ",
+      title: "BLOCK NAME ",
       dataIndex: "name",
       key: "name",
       ...getColumnSearchProps("name"),
       render: (text, record) => (
-        <Link to={`/ClassDetail`}>{text}</Link>
+        <Link to={`/Class/${text}`}>{text}</Link>
       ),
     },
   ];
 
   return <Table columns={columns} dataSource={rowData} />;
 };
+
+
+// /ClassDetail 

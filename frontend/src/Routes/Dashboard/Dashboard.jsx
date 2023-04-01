@@ -53,6 +53,7 @@ const Dashboard = () => {
           <Card color="white" c="#242e42" heading={"Total Students"} number={data.three} />
           <Card color="white" c="#242e42" heading={"Total Subjects"} number={data.four} />
         </div>
+        
         <div className="Overall-attendence-graphs">
           <h3>Overall Attendence for each block 1 </h3>
           <LineGraph data={LineGraphData}/>

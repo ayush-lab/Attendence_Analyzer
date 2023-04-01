@@ -4,8 +4,12 @@ import BarChart from "../../Component/Graphs/BarChart";
 import Navv from "../../Component/Navbar";
 import { Tag, Tabs, Collapse } from "antd";
 import "./ClassDetail.css";
+import { useParams } from 'react-router-dom';
 import { PieChart } from "react-minimal-pie-chart";
 import Card from "../../Component/Card/Card";
+import LineGraph from "../Dashboard/Graphs/LineGraph";
+import LineGraphData from "../Dashboard/GraphData/LineGraph";
+// import  "../Dashboard/Dashboard.css"
 
 const { Panel } = Collapse;
 
@@ -65,13 +69,17 @@ export default function ClassDetail() {
     </div>
   );
 
+  
+  const params = useParams();
+  const className = params.id;
+
   return (
     <>
       <Navv />
       {/* {} */}
       {/* <BarChart/> */}
       <div className="ClassDetail">
-        <h3 style={{ textAlign: "center", color: "black" }}>Class Name : S2</h3>
+        <h3 style={{ textAlign: "center", color: "black" }}>Class Name : {className}</h3>
         <div className="cards">
           <Card
             color="#212529"
@@ -86,6 +94,13 @@ export default function ClassDetail() {
         <Tabs defaultActiveKey="1">
           <Tabs.TabPane tab="Maths " key="1">
             <Collapse onChange={onChange}>
+            <Panel header="Attendence graph" key="0">
+                <p style={{fontWeight:"bold"}} >7% students were present today</p>
+                <div className="Overall-attendence-graph">
+                  <h3>Overall Attendence for each block 1 </h3>
+                  <LineGraph data={LineGraphData}/>
+              </div>
+              </Panel>
               <Panel header="Today's attendence" key="1">
                 <p style={{fontWeight:"bold"}} >70% students were present today</p>
                 <div className="piechart">
