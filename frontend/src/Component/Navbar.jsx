@@ -15,7 +15,7 @@ function Navv(props) {
           <Nav className="me-auto" activeKey={location.pathname}>
             <Nav.Link href="/">Dashboard</Nav.Link>
             <Nav.Link href="/classes">Classes</Nav.Link>
-            <Nav.Link href="/timetable">Timetable</Nav.Link>
+            <Nav.Link href="/timeline">TimeLine</Nav.Link>
             <Nav.Link href="/calender">Calender</Nav.Link>
             <Nav.Link href="/login">Login</Nav.Link>
 

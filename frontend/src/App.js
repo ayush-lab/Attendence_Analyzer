@@ -5,6 +5,7 @@ import Classes from './Routes/Classes/Classes';
 import TimeTab from './Routes/Calender';
 import Login from './Routes/Login/login';
 import ClassDetail from './Routes/ClassDetail';
+import Timeline from './Routes/TimeLine/TimeLine'
 function App() {
   return (
     <>
@@ -15,6 +16,8 @@ function App() {
             <Route path="/calender" element={<TimeTab/>} />
             <Route path="/ClassDetail" element={<ClassDetail/>} />
             <Route path="/login" element={<Login/>} />
+            <Route path="/timeline" element={<Timeline/>} />
+
 
 
           </Routes>
