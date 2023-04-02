@@ -1,3 +1,9 @@
-.screenPadding{
-    padding:32px;
+.screenPadding {
+    padding: 32px;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
 }

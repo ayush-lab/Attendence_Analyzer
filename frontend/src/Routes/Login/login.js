@@ -4,12 +4,11 @@ import { Navigate } from "react-router-dom";
 import { Form, Input, Button } from "antd";
 // import ServerService from "../../../API/ServerService";
 import { message } from "antd";
-import Navv from "../../Component/Navbar";
 import { useNavigate } from "react-router-dom";
 //import { setAdmin } from "../../../store/actions/actions";
 
 export default function Login() {
-//   const [Navigate, setNavigate] = useState(null);
+  //   const [Navigate, setNavigate] = useState(null);
   let history = useNavigate();
   const forgotPassword = () => {
     //loading msg
@@ -17,18 +16,18 @@ export default function Login() {
     message.loading({ content: "Action in progress...", key });
 
     // Calling the Forgot password API
-//     ServerService.forgotPassword()
-//       .then((res) => {
-//         message.success({
-//           content: "E-Mail sent successfully!",
-//           key,
-//           duration: 2,
-//         });
-//       })
-//       .catch((err) => {
-//         // console.log(err);
-//         message.error({ content: "Something went wrong!", key, duration: 2 });
-//       });
+    //     ServerService.forgotPassword()
+    //       .then((res) => {
+    //         message.success({
+    //           content: "E-Mail sent successfully!",
+    //           key,
+    //           duration: 2,
+    //         });
+    //       })
+    //       .catch((err) => {
+    //         // console.log(err);
+    //         message.error({ content: "Something went wrong!", key, duration: 2 });
+    //       });
   };
 
   const layout = {
@@ -54,12 +53,12 @@ export default function Login() {
     let key = "updatable";
     message.loading({ content: "Action in progress...", key });
     message.success({
-              content: "Logged in successfully!",
-              key,
-              duration: 2,
-            });
+      content: "Logged in successfully!",
+      key,
+      duration: 2,
+    });
     history("/");
-    
+
     // Calling the login API
     // ServerService.Login(values)
     //   .then((res) => {
@@ -88,20 +87,19 @@ export default function Login() {
   };
 
   // to Navigate to addView Route
-//   if (Navigate != null) {
-//     return <Navigate to={"/dashboard"} />;
-//   }
+  //   if (Navigate != null) {
+  //     return <Navigate to={"/dashboard"} />;
+  //   }
 
   return (
     <div>
-      <Navv />
       <Form
         {...layout}
         name="basic"
         initialValues={{ remember: true }}
         onFinish={onFinish}
         onFinishFailed={onFinishFailed}
-        style={{paddingTop:"35px"}}
+        style={{ paddingTop: "35px" }}
       >
         <Form.Item
           label="Username"
