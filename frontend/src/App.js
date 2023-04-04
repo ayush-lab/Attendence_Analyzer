@@ -4,7 +4,7 @@ import Dashbaord from './Routes/Dashboard/Dashboard';
 import Blocks from './Routes/Blocks/Blocks';
 import TimeTab from './Routes/Calender';
 import Login from './Routes/Login/login';
-import ClassDetail from './Routes/ClassDetail';
+import ClassDetail from './Routes/ClassDetail/ClassDetail';
 import Classes from './Routes/Classes/Classes';
 import Navv from './Component/Navbar';
 import Timeline from './Routes/TimeLine/TimeLine'

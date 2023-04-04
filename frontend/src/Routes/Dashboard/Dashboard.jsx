@@ -52,17 +52,17 @@ const Dashboard = () => {
         </div>
         <div className="graphContainer">
           <div className="Overall-attendence-graphs">
-            <h3>Overall Attendence for each block 1 </h3>
+            <h3>Real-time Strength of all Classrooms</h3>
             <LineGraph data={LineGraphData} />
           </div>
 
           <div className="Overall-attendence-graphs">
-            <h3 >Overall Attendence for each block 2 </h3>
+            <h3 >Blockwise strength</h3>
             <BarGraph data={BarGraphData} />
           </div>
 
 
-          <div className="Overall-attendence-graphs">
+          {/* <div className="Overall-attendence-graphs">
             <h3 >Overall Attendence for each block 3 </h3>
             <PiechartGraph data={PieChartData} />
           </div>
@@ -70,7 +70,7 @@ const Dashboard = () => {
           <div className="Overall-attendence-graphs">
             <h3 >Overall Attendence for each block 4 </h3>
             <RadarChartGraph data={RadarChartData} />
-          </div>
+          </div> */}
 
           {/* <div className="Overall-attendence-graphs">
             <h3 >Overall Attendence for each block 5 </h3>
