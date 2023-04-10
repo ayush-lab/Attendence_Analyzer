@@ -60,7 +60,7 @@ export default function Blocks() {
             <div className="info">
                 <div className="Overall-attendence-graphs">
                     <h2>Overall Attendence of Blocks </h2>
-                    <LineGraph data={LineGraphData} />
+                    <LineGraph data={LineGraphData(10)} />
                 </div>
                 <div className="Overall-attendence-graphs">
                     <h2>Attendence of all Blocks </h2>

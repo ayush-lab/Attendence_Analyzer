@@ -23,7 +23,7 @@ export default class LineGraph extends PureComponent {
           <YAxis />
           <Tooltip />
           <Legend />
-          <Line type="monotone" dataKey="minThreshhold" stroke="#8884d8" activeDot={{ r: 8 }} />
+          {/* <Line type="monotone" dataKey="minThreshhold" stroke="#8884d8" activeDot={{ r: 8 }} /> */}
           <Line type="monotone" dataKey="actual" stroke="#82ca9d" />
         </LineChart>
       </ResponsiveContainer>

@@ -4,15 +4,15 @@ import ServerService from "../../API/ServerService";
 import "./Dashboard.css";
 import Card from "../../Component/Card/Card";
 import LineGraphData from "../../Component/Graphs/GraphData/LineGraph";
-import PieChartData from "../../Component/Graphs/GraphData/PieChartData";
+// import PieChartData from "../../Component/Graphs/GraphData/PieChartData";
 import BarGraphData from '../../Component/Graphs/GraphData/BarGraphData'
-import RadarChartData from "../../Component/Graphs/GraphData/RadarData";
+// import RadarChartData from "../../Component/Graphs/GraphData/RadarData";
 import LineGraph from "../../Component/Graphs/LineGraph";
 import BarGraph from "../../Component/Graphs/BarGraph";
-import PiechartGraph from "../../Component/Graphs/PieChartGraph";
-import RadarChartGraph from "../../Component/Graphs/RadarchartGraph";
-import BrushBarChart from "../../Component/Graphs/BrushBarChart";
-import BrushBarData from "../../Component/Graphs/GraphData/BrushBarData";
+// import PiechartGraph from "../../Component/Graphs/PieChartGraph";
+// import RadarChartGraph from "../../Component/Graphs/RadarchartGraph";
+// import BrushBarChart from "../../Component/Graphs/BrushBarChart";
+// import BrushBarData from "../../Component/Graphs/GraphData/BrushBarData";
 
 const Dashboard = () => {
   const [data, setData] = useState({
@@ -21,6 +21,7 @@ const Dashboard = () => {
     three: 1800,
     four: 75,
   });
+  const [lineGraphData, setLineGraphData] = useState(LineGraphData(10));
 
   // useEffect(() => {
   //   ServerService.GetDashboardData()
@@ -38,7 +39,6 @@ const Dashboard = () => {
   //     });
   // }, []);
 
-  console.log(LineGraphData)
 
   return (
     <>
@@ -53,7 +53,7 @@ const Dashboard = () => {
         <div className="graphContainer">
           <div className="Overall-attendence-graphs">
             <h3>Real-time Strength of all Classrooms</h3>
-            <LineGraph data={LineGraphData} />
+            <LineGraph data={lineGraphData} />
           </div>
 
           <div className="Overall-attendence-graphs">
