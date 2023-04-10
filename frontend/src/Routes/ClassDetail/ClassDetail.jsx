@@ -89,7 +89,7 @@ export default function ClassDetail() {
                 </div> */}
                 <div className="content">
                     <div className="player">
-                        <ReactPlayer url={'https://www.youtube.com/watch?v=7H3D-6nj_dY'} />
+                        <ReactPlayer playing={true} url={'https://youtu.be/6r3TiKlaOgk?t=11'} />
                     </div>
                     <div className="Overall-attendence-graphs">
                         <h2>Attendance of {'LT-1'} </h2>
