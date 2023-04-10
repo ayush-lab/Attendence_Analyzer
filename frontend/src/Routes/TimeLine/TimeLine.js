@@ -10,15 +10,15 @@ import HeatMap from '@uiw/react-heat-map';
 
 
 const value = [
-  { date: '2023-01-11', count:2 },
+  { date: '2023-01-11', count:56 },
   ...[...Array(17)].map((_, idx) => ({ date: `2023-01-${idx + 10}`, count: idx })),
   ...[...Array(17)].map((_, idx) => ({ date: `2023-02-${idx + 10}`, count: idx })),
-  { date: '2023-04-12', count:2 },
-  { date: '2023-05-01', count:5 },
-  { date: '2023-05-02', count:5 },
-  { date: '2023-05-03', count:1 },
-  { date: '2023-05-04', count:11 },
-  { date: '2023-05-08', count:32 },
+  { date: '2023-04-12', count:58 },
+  { date: '2023-05-01', count:67 },
+  { date: '2023-05-02', count:99 },
+  { date: '2023-05-03', count:90 },
+  { date: '2023-05-04', count:70 },
+  { date: '2023-05-08', count:80 },
 ];
 
 const TimeLine = () => {
