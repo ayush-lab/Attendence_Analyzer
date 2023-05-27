@@ -9,19 +9,19 @@ const data = [
     name: 'ME Block',
     // uv: 3000,
     strength: 60,
-    amt: 60,
+    amt: 50,
   },
   {
     name: 'CS&IT Block',
     // uv: 2000,
-    strength: 90,
+    strength: 55,
     amt: 90,
   },
   {
     name: 'LT Block',
     // uv: 2780,
-    strength: 80,
-    amt: 80,
+    strength: 100,
+    amt: 100,
   },
   {
     name: 'New LT Block',

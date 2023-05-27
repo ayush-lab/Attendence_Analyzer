@@ -18,7 +18,7 @@ const tableColumns = [
         dataIndex: "name",
         key: "id",
         render: (text, record) => (
-            <Link to={`/Class/${record.id}`}>{text}</Link>
+            <Link to={`/Class/${record.name}`}>{text}</Link>
         ),
     },
     {

@@ -1,88 +1,32 @@
 
 import React, { useEffect, useRef, useState } from "react";
 // import { useParams } from "react-router-dom";
-import { Table, Input, Button, Space, Progress } from "antd";
-import Highlighter from "react-highlight-words";
-import { SearchOutlined } from "@ant-design/icons";
+import { Table, Input, Button, Space, Progress, Tag } from "antd";
+// import Highlighter from "react-highlight-words";
+// import { SearchOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 // import ServerService from "../../API/ServerService";
 import { useParams } from 'react-router-dom';
-import LineGraph from "../../Component/Graphs/LineGraph";
+// import LineGraph from "../../Component/Graphs/LineGraph";
+import ECEBarGraph from '../../Component/Graphs/GraphData/LtData/ECE'
+import MEBarGraph from '../../Component/Graphs/GraphData/LtData/ME';
+import CSITBarGraph from '../../Component/Graphs/GraphData/LtData/CS&IT';
+import LTBarGraph from '../../Component/Graphs/GraphData/LtData/LT_BLOCK';
+
+
 import BarGraph from "../../Component/Graphs/BarGraph";
 import BarGraphData from "../../Component/Graphs/GraphData/BarGraphData"
-import ReactPlayer from "react-player";
-import classData from "./dummyData";
 
-const LineGraphData = [
-  {
-    name: 'Page A',
-    uv: 4000,
-    pv: 2400,
-    amt: 2400,
-  },
-  {
-    name: 'Page B',
-    uv: 3000,
-    pv: 1398,
-    amt: 2210,
-  },
-  {
-    name: 'Page C',
-    uv: 2000,
-    pv: 9800,
-    amt: 2290,
-  },
-  {
-    name: 'Page D',
-    uv: 2780,
-    pv: 3908,
-    amt: 2000,
-  },
-  {
-    name: 'Page E',
-    uv: 1890,
-    pv: 4800,
-    amt: 2181,
-  },
-  {
-    name: 'Page F',
-    uv: 2390,
-    pv: 3800,
-    amt: 2500,
-  },
-  {
-    name: 'Page G',
-    uv: 3490,
-    pv: 4300,
-    amt: 2100,
-  },
-];
+// import ReactPlayer from "react-player";
+import classData from "./dummyData";
+import ECELTData from './blocks/ECE'
+import MEData from './blocks/ME'
+import CSITData from './blocks/CS&IT'
+import LTBlockData from './blocks/LT_BLOCK'
+
 
 export default function Classes(props) {
-  // const [rowData, setRowData] = useState([]);
-
-
-  //   useEffect(() => {
-  //     if (id !== undefined) {
-  //       ServerService.GetCollegesList(id)
-  //         .then((res) => {
-  //           setRowData(res.data);
-  //         })
-  //         .catch((err) => {
-  //           // console.log(err);
-  //         });
-  //     } 
-  //     else {
-  //       ServerService.GetAllColleges()
-  //         .then((res) => {
-  //           setRowData(res.data);
-  //         })
-  //         .catch((err) => {
-  //           // console.log(err);
-  //         });
-  //     }
-  //   }, [id]);
-
+  
 
   const tableColumns = [
     {
@@ -122,21 +66,40 @@ export default function Classes(props) {
   const params = useParams();
   const block = params.block;
 
+  var barGraphType = BarGraphData;
+  var LTData = classData;
+
+  if(block === "ECE_Block"){
+    barGraphType = ECEBarGraph;
+    LTData = ECELTData
+  }
+  else if(block === "ME_Block"){
+    barGraphType = MEBarGraph;
+    LTData = MEData;
+  }
+  else if(block === "CS&IT_Block"){
+    barGraphType = CSITBarGraph;
+    LTData = CSITData;
+  }
+  else if(block === "LT_BLOCK"){
+    barGraphType = LTBarGraph;
+    LTData = LTBlockData;
+  }
+
   return (
     <>
       <div className="info">
+    
         <div className="Overall-attendence-graphs">
-          <h2>Overall Attendence for each block 1 </h2>
-          <LineGraph data={LineGraphData} />
-        </div>
-        <div className="Overall-attendence-graphs">
-          <h2>Overall Attendence for each block 1 </h2>
-          <BarGraph data={BarGraphData} />
+          <h2 style={{paddingBottom:"20px"}}>Overall Attendence for each LT for <span style={{textDecoration:"underline", color:"purple"}} >{block}</span> </h2>
+
+          <BarGraph fill={"#a0d4ec"} data={barGraphType} />
         </div>
       </div>
-      <h2 style={{ textAlign: "center", paddingBottom: "50px", paddingTop: "50px" }}>Classes in the {block} </h2>
+      <h2 style={{ textAlign: "center", paddingBottom: "50px", paddingTop: "50px" }}>Classes in the <span style={{textDecoration:"underline", color:"purple"}} >{block}</span> </h2>
       <div style={{ paddingLeft: "30px" }}>
-        <Table columns={tableColumns} dataSource={classData} />
+        <Table columns={tableColumns} 
+               dataSource={LTData} />
       </div>
     </>
   );
