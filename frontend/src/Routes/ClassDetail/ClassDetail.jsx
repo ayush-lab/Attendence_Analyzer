@@ -76,7 +76,7 @@ export default function ClassDetail() {
     return (
         <>
             <div className="ClassDetail">
-                <h3 style={{ textAlign: "center", color: "black" }}>Class Name : {className}</h3>
+                <h3 style={{ textAlign: "center", color: "black" }}>Class Name : LT - {className}</h3>
                 {/* <div className="cards">
                     <Card
                         color="#212529"
@@ -92,7 +92,7 @@ export default function ClassDetail() {
                     <ReactPlayer playing={true} muted={true} url={'https://youtu.be/6r3TiKlaOgk?t=11'} />
                     </div>
                     <div className="Overall-attendence-graphs">
-                        <h2>Attendance of {'LT-1'} </h2>
+                        <h2>Attendance of LT - {className} </h2>
                         <LineGraph data={LineGraphData(10)} />
                     </div>
                 </div>
